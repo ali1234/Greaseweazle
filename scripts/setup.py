@@ -2,10 +2,6 @@ from setuptools import setup
 from subprocess import check_call
 
 
-# It is a bit ugly to do this unconditionally when importing setup.py, but it works.
-check_call(['make', '-C', '..', '-f', 'Rules.mk', 'scripts/greaseweazle/version.py'])
-
-
 setup(
     name='greaseweazle',
     version='0.16',
@@ -19,6 +15,6 @@ setup(
         ]
     },
     install_requires=[
-        'bitarray', 'crcmod', 'pyserial',
+        'bitarray-hardbyte', 'crcmod', 'pyserial',
     ],
 )
